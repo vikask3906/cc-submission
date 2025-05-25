@@ -1,3 +1,70 @@
+# CampusPulse: Task 1 – Student Life & Relationship Prediction
+
+## Overview
+
+CampusPulse is a data science initiative to uncover the factors influencing student life, academic success, and social behavior, with a special focus on predicting romantic relationship status. This repository documents the complete process for Task 1, as per the Student Wellness and Experience Board at IIT Guwahati.
+
+---
+
+## Approach & Structure
+
+### 1. Variable Identification Protocol
+
+- **Feature 1 (F1)**: Identified as a social/lifestyle variable due to its strong positive correlation with alcohol consumption (`Dalc`), higher number of academic failures, and a greater proportion of students in relationships.
+- **Feature 2 (F2)**: Determined to be an academic performance indicator, given its strong correlation with grades and academic success.
+- **Feature 3 (F3)**: Recognized as a social activity metric, based on its high correlation with alcohol consumption and time spent out with friends.
+
+### 2. Data Integrity Audit
+
+- Checked for null values across all features.
+- Converted appropriate columns to numerical types for robust analysis.
+- Created a correlation matrix to guide imputation:
+  - Imputed missing values for features with strong correlations (e.g., `Fedu` from `Medu`, `higher` from `G1`, `G2`, `G3`, `traveltime` from `address`, `freetime` from `goout`).
+  - For features like `famsize` and `absences` with low correlation to other variables, used median imputation.
+
+### 3. Exploratory Insight Report
+
+- Formulated and visualized key questions:
+  - Do students with more free time or higher social activity tend to be in relationships?
+  - Is parental cohabitation status linked to relationship likelihood?
+  - How does family relationship quality affect romantic involvement?
+  - Are alcohol consumption and poor family relations connected?
+  - Is there a link between travel time and absences?
+- Each plot includes clear labels, captions, and concise interpretations.
+
+### 4. Relationship Prediction Model
+
+- Built a Random Forest classifier using features selected from EDA and correlation analysis.
+- Evaluated model performance and interpreted feature importance.
+
+### 5. Model Reasoning & Interpretation
+
+- Used SHAP to visualize global and local feature importance.
+- Provided plain-language interpretations of what drives the model’s predictions.
+
+---
+
+## How to Use
+
+1. Clone this repository.
+2. Add the dataset to the `/data` folder (not included for privacy).
+3. Open `task1.ipynb` in Jupyter Notebook or JupyterLab.
+4. Run all cells to reproduce the analysis and visualizations.
+
+---
+
+## Dependencies
+
+- Python 3.x
+- pandas
+- numpy
+- matplotlib
+- seaborn
+- scikit-learn
+- shap
+
+
+
 Here is a concise **README.md** for your Task 2 WeatherMind submission, structured by levels and notebook files, and explicitly describing your approach and notebook structure as required by your assignment ([see image][1]):
 
 ---
